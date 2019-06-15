@@ -1,0 +1,26 @@
+{
+  "name": "examenangularedel",
+  "version": "1.0.0",
+  "description": "examenedel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edelmorataya/ExamenAngularEdel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "hhttps://github.com/edelmorataya/ExamenAngularEdel/issues"
+  },
+  "homepage": "https://github.com/edelmorataya/ExamenAngularEdel#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.22",
+    "angular": "^1.7.8",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^3.3.7",
+    "sweetalert2": "^8.11.6"
+  }
+}
