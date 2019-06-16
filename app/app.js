@@ -1,6 +1,6 @@
 (() => {
 	'use strict';
-	let mainModule = angular.module ("mainApp", ["ui.router"]);
+	let mainModule = angular.module ("mainApp", ["ui.router", "ui.bootstrap"]);
 
 	let mainModConfig = ($stateProvider, $locationProvider, $urlRouterProvider) => {
 		$locationProvider.html5Mode(false);
@@ -26,16 +26,6 @@
 					controller: 'homeController',
 					controllerAs: 'vm'
 				}
-			},
-			{
-				name: 'app.gallery',
-				options: {
-					title: "Gallery",
-					url: '/gallery',
-					templateUrl: 'app/js/controllers/gallery/gallery.html',
-					controller: 'galleryController',
-					controllerAs: 'vm'
-				}
 			}
 			,
 			{
@@ -45,6 +35,16 @@
 					url: '/catalog',
 					templateUrl: 'app/js/controllers/catalog/products.html',
 					controller: 'productsController',
+					controllerAs: 'vm'
+				}
+			},
+			{
+				name: 'app.gallery',
+				options: {
+					title: "Gallery",
+					url: '/gallery',
+					templateUrl: 'app/js/controllers/gallery/gallery.html',
+					controller: 'galleryController',
 					controllerAs: 'vm'
 				}
 			}
