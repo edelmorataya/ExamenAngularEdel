@@ -4,19 +4,24 @@
 <br>
 <br>
 <br>
+
    <div ng-controller="galleryController">
     <div style="height: 305px">
       <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
         <div uib-slide ng-repeat="element in vm.slides1 track by element.id" index="element.id">
           <img ng-src="{{element.if}}" style="margin:auto;">
           <div class="carousel-caption">
-            <h4>Slide {{element.marca}}</h4>
+            <h4>{{element.marca}}</h4>
             <p>{{element.so}}</p>
           </div>
         </div>
         <div ng-repeat="element in vm.slides1">
           {{element.id}} {{element.if}}  dato {{element.marca}}
         </div>
+
      </div>
+     <ul class="carousel-thumbs">
+      <li class="carousel-thumb" ng-repeat="element in vm.slides1" ng-click="vm.setActiveSlide(element.id)"  index="element.id" style="background-image: url({{element.if}}); width: {{100/vm.slides1.length}}%">{{element.marca}}</li>
+    </ul>
     </div>
 
