@@ -2,9 +2,9 @@
 (() => {
     'use strict'
 
-    let carouselModule = angular.module("mainApp");
+    let galleryModule = angular.module("mainApp");
 
-    carouselModule.controller('carouselController', function(){
+    galleryModule.controller('galleryController', function(){
         let vm = this;
         vm.carousel = 'carousel controller';
 

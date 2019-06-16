@@ -1,0 +1,86 @@
+
+
+
+<div >
+
+    <div class="container">
+    <div ng-controller="productsController" >
+          <div class="card p-3">
+            <form>
+              <div class="form-group">
+                <h6>Agregar un Celular</h6>
+                <label>ID:</label>
+                <input type="text" disabled="" class="form-control" id="id" ng-model="vm.product.id" >
+                <label>Marca</label>
+                <input type="text" class="form-control" id="id" ng-model="vm.product.marca">
+                <label>Modelo:</label>
+                <input type="text" class="form-control" id="nombre" ng-model="vm.product.modelo" >
+                <label>Precio:</label>
+                <input type="text" class="form-control" id="costo" ng-model="vm.product.precio">
+                <label>Memoria RAM: </label>
+                <input type="text" class="form-control" id="proveedor" ng-model="vm.product.ram" >
+                <label>Almacenamiento Interno:</label>
+                <input type="number" class="form-control" id="nol" ng-model="vm.product.ai">
+                <label>Bateria:</label>
+                <input type="text" class="form-control" id="fechacad" ng-model="vm.product.bat">
+                <label>Tamaño de la pantalla</label>
+                <input type="text" class="form-control" id="fechacad" ng-model="vm.product.screen">
+               <label>Sistema Operativo</label>
+               <input type="text" class="form-control" id="nombre" ng-model="vm.product.so" >
+               <label>Imagen frontal (URL)</label>
+               <input type="text" class="form-control" id="nombre" ng-model="vm.product.if" >
+               <label>Imagen lateral (URL)</label>
+               <input type="text" class="form-control" id="nombre" ng-model="vm.product.il" >
+
+               <button type="button" class="btn btn-info" ng-click="vm.saveproduct()">Agregar producto</button>
+               <button type="button" class="btn btn-outline-danger" ng-click="vm.iniproduct()" class="btn btn-outline-danger">Limpiar</button>
+        
+            </form>
+            <br>
+            <br>
+     
+            <table class="table table-condensed table-responsive">
+                <thead>                    
+                    <td>ID</td>
+                    <td>Marca</td>
+                    <td>Modelo</td>
+                    <td>Precio</td>
+                    <td>Memoria RAM</td>
+                    <td>Almacenamiento Interno</td>
+                    <td>Bateria</td>
+                    <td>Tamaño de la pantalla</td>
+                    <td>Sistema Operativo</td>
+                    <td>Imagen Frontal</td>
+                    <td>Imagen Lateral</td>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in vm.products track by $index">
+                        <td>{{product.id}}</td>
+                        <td>{{product.marca}}</td>
+                        <td>{{product.modelo}}</td>
+                        <td>{{product.precio}}</td>
+                        <td>{{product.ram}}</td>
+                        <td>{{product.ai}}</td>
+                        <td>{{product.bat}}</td>
+                        <td>{{product.screen}}</td>
+                        <td>{{product.so}}</td>
+                        <td><img style="max-width:100px;" src="{{product.if}}"></td>
+                        <td><img style="max-width:100px;" src="{{product.il}}"></td>
+                        <td>
+                            <button type="button" class="btn btn-info" ng-click="vm.modifyProduct(product)">
+                                <span>Edit</span>
+                            </button>
+                            <button type="button" class="btn btn-danger" ng-click="vm.deleteProducts($index)">
+                                <span>Delete</span>
+                            </button>
+                        
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+          </div>
+    
+    </div>
+</div>
+</div>

@@ -43,8 +43,8 @@
 				options: {
 					title: "Catalog",
 					url: '/catalog',
-					templateUrl: 'app/js/controllers/catalog/catalog.html',
-					controller: 'catalogController',
+					templateUrl: 'app/js/controllers/catalog/products.html',
+					controller: 'productsController',
 					controllerAs: 'vm'
 				}
 			}
